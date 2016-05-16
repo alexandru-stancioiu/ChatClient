@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ro.pub.cs.chatclient.GroupChatActivity"
+    tools:showIn="@layout/activity_group_chat">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/group_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="#404040"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/leave_group"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/leave_group" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/group_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:editable="false"
+        android:text=""
+        android:layout_gravity="start"
+        android:textAlignment="inherit"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/group_message_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:hint="Enter your message..."
+            />
+        <Button
+            android:id="@+id/send_group_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Send"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Send_file"
+        android:textAllCaps="false"
+        />
+
+    <TextView
+        android:id="@+id/invite_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/invite_user"
+        android:textColor="#404040" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ListView
+            android:layout_width="347dp"
+            android:layout_height="159dp"
+            android:id="@+id/invite_user_list"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
